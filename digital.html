@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>کاردهای خدمات - طراحی جدید</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <style>
+    /* استایل بخش توضیحات قابل گسترش */
+    .collapsible {
+      max-height: 3.5rem;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+      position: relative;
+    }
+    .collapsible.expanded {
+      max-height: 100rem;
+    }
+    .collapsible::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1.5rem;
+      background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    }
+    .collapsible.expanded::after {
+      display: none;
+    }
+  </style>
+</head>
+<body class="">
+
+    <div class="bg-gray-800 rounded-2xl shadow-2xl p-6 transform hover:scale-105 hover:shadow-xl transition-all duration-300">
+        <div class="relative">
+            <img src="./f2.jpg" alt="جلد کتاب" class="w-full h-64 object-cover rounded-xl shadow-md" loading="lazy" />
+            <div class="absolute top-4 right-4 bg-yellow-500 text-gray-900 px-2 py-1 rounded-full text-xs font-bold">
+                جدید
+            </div>
+        </div>
+        <div class="mt-4">
+            <h3 class="text-2xl text-yellow-400 font-bold mb-2">عنوان کتاب ۳</h3>
+            <p class="text-sm text-gray-300 mb-4">توضیح مختصر درباره کتاب سوم...</p>
+            <div class="flex items-center justify-between text-gray-400 text-sm">
+                <div class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 4.48 2 8v10c0 3.52 4.48 6 10 6s10-2.48 10-6V8c0-3.52-4.48-6-10-6zm0 2c4.41 0 8 1.79 8 4s-3.59 4-8 4-8-1.79-8-4 3.59-4 8-4zm0 16c-4.41 0-8-1.79-8-4v-2.09c1.77 1.25 4.42 2.09 8 2.09s6.23-.84 8-2.09V16c0 2.21-3.59 4-8 4z" />
+                    </svg>
+                    <span>۴۰۰ صفحه</span>
+                </div>
+                <div class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2L2 7h20L12 2zm0 2.18L18.09 7H5.91L12 4.18zM4 9v11h16V9H4zm2 2h12v7H6v-7z" />
+                    </svg>
+                    <span>پیشرفته</span>
+                </div>
+            </div>
+            <button class="mt-4 w-full bg-yellow-500 text-gray-900 py-2 rounded-full font-bold hover:bg-yellow-600 active:scale-95 transition duration-300">
+                جزئیات بیشتر
+            </button>
+        </div>
+    </div>
+    
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('.toggle-read-more').forEach(button => {
+        button.addEventListener('click', function() {
+          const collapsible = this.previousElementSibling;
+          collapsible.classList.toggle('expanded');
+          this.textContent = collapsible.classList.contains('expanded') ? 'کمتر' : 'ادامه';
+        });
+      });
+    });
+  </script>
+</body>
+</html>
