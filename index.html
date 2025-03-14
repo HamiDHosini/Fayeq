@@ -65,7 +65,7 @@
       <img data-src="./Done.jpg" alt="تصویر پروفایل" class="lazy mx-auto rounded-full w-40 h-40 border-4 border-yellow-500 shadow-lg transform hover:scale-105 transition duration-300" />
       
        
-      <h2 class="mt-4 text-3xl text-yellow-400 font-bold inline-block">
+      <h2 class="mt-4 text-3xl text-yellow-400 font-bold block">
         فایق رحمانی
       </h2>
       <span id="role" class="inline-block text-lg text-white ml-2 opacity-75 transition-opacity duration-500"></span>
@@ -153,24 +153,24 @@
         <div class="p-4 glass">
             <h3 class="mb-6  text-yellow-400 font-bold text-2xl">من چیکار میکنم؟</h3>
 
-                <div class="grid md:grid-cols-2 gap-6 px-4 md:px-12">
-                  <div class="flex items-center p-6 bg-gray-800 shadow-lg rounded-lg transition-transform transform hover:scale-105 service-card">
-                      <div class="p-3 mx-2 bg-yellow-500 text-gray-900 rounded-full shadow-lg flex items-center justify-center">
+                <div class="grid gap-6 ">
+                  <div class="flex items-center p-4 bg-gray-800 shadow-lg rounded-lg transition-transform transform hover:scale-105 service-card">
+                      <div class="p-2 pt-4 ml-2  bg-yellow-500 text-gray-900 rounded-full shadow-lg flex items-center justify-center">
                           <i class="bi bi-chat-square-text text-xl"></i>
                       </div>
-                      <div class="ml-4">
-                          <h4 class="text-white font-bold text-lg">استاد خصوصی انگلیسی</h4>
-                          <p class="text-gray-300 text-sm">آموزش گرامر، مکالمه و درک مطلب با روش‌های جدید.</p>
+                      <div class="">
+                          <h6 class="text-white font-bold text-lg">استاد خصوصی انگلیسی</h6>
+                          <p class="text-gray-300 text-sm opacity-75 transition-opacity duration-500">آموزش گرامر، مکالمه و درک مطلب با روش‌های جدید.</p>
                       </div>
                   </div>
               
-                  <div class="flex items-center p-6 bg-gray-800 shadow-lg rounded-lg transition-transform transform hover:scale-105 service-card">
-                      <div class="p-3 mx-2 bg-yellow-500 text-gray-900 rounded-full shadow-lg flex items-center justify-center">
+                  <div class="flex items-center p-4 bg-gray-800 shadow-lg rounded-lg transition-transform transform hover:scale-105 service-card">
+                      <div class="p-2 pt-3 ml-2 bg-yellow-500 text-gray-900 rounded-full shadow-lg flex items-center justify-center">
                           <i class="bi bi-bar-chart-line text-xl"></i>
                       </div>
-                      <div class="ml-4">
-                          <h4 class="text-white font-bold text-lg">آموزش دیجیتال مارکتینگ</h4>
-                          <p class="text-gray-300 text-sm">یادگیری تبلیغات، سئو، برندینگ و رشد کسب‌وکار.</p>
+                      <div class="">
+                          <h6 class="text-white font-bold text-lg">آموزش دیجیتال مارکتینگ</h6>
+                          <p class="text-gray-300 text-sm opacity-75 transition-opacity duration-500">یادگیری تبلیغات، سئو، برندینگ و رشد کسب‌وکار.</p>
                       </div>
                   </div>
               </div>
@@ -388,7 +388,7 @@
  
 
   document.addEventListener("DOMContentLoaded", () => {
-    const roles = ["آموزش دیجیتال مارکتینگ", "توسعه وبسایت", "استاد خصوصی"];
+    const roles = ["آموزش دیجیتال مارکتینگ", "توسعه وبسایت", "استاد انگلیسی خصوصی"];
     let currentIndex = 0;
     const roleElement = document.getElementById("role");
 
